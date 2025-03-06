@@ -1,0 +1,48 @@
+
+/* .total{
+  min-height: 90vh;
+  background-color: rgba(234, 255, 227, 0.827);
+} */
+.main{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  min-height: 84vh;
+  min-width: 95vw;
+  background-color: azure;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.left{
+  grid-column: 1/2;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 3px;
+  max-height: 77vh;
+  min-height: 84vh;
+}
+
+.right{
+  grid-column: 2/3;
+  display: grid;
+  min-height: 77vh;
+  justify-content: center;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 6vh;
+  background-color: rgb(124, 68, 245);
+  margin-bottom: 1vh;
+  border: 1px solid black;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+

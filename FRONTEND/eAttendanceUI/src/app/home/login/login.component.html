@@ -1,0 +1,105 @@
+<div class="maindiv" style="border-radius: 8px;">
+  <div class="reg" style="border-radius: 8px;">
+    <div class="left">
+      <!-- Left Content (Homepage Section) -->
+      <div class="left-content"
+        style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 50px; background-color: #ffffff; border-right: 1px solid #ddd; min-height: 100%;">
+        <div>
+          <div style="text-align: center;">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.LwY9RKSDacshjDJg-wIq_QHaHa&pid=Api&P=0&h=180"
+              alt="Example Image">
+          </div>
+
+
+          <h1 style="font-size: 3rem; font-weight: 700; color: #09e957; text-align: center;">Welcome to<br>E-Attendance
+          </h1>
+          <p style="font-size: 1.2rem; color: #777; text-align: center; margin-top: 20px;">Say goodbye to paperwork and
+            hello to efficient attendance management.</p>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <!-- Right Content (Login Component) -->
+      <div class="right-content"
+        style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 50px; background-color: #f8f9fa; min-height: 100%; ">
+        <div class="login-card"
+          style="width: 60%; max-width: 400px; background-color: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);">
+          <div class="lg:p-36 md:p-52 sm:p-20 p-8 w-full lg:w-1/2" style=" height: 600%;">
+            <h1 class="text-2xl font-semibold mb-4">Login-form</h1>
+            <form style=" width: 60%; height: 15%;">
+              <br>
+
+              <!-- Username Input -->
+              <div class="mb-4">
+                <label for="username" class="block text-gray-600">Username</label>
+                &nbsp;
+                <input type="text" id="username" name="username" [(ngModel)]="userData.mail"
+                  class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
+                  autocomplete="off">
+              </div>
+              <br>
+              <!-- Password Input -->
+              <div class="mb-4">
+                <label for="password" class="block text-gray-800">Password</label>
+                &nbsp;
+                <input type="password" id="password" name="password" [(ngModel)]="userData.password"
+                  class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
+                  autocomplete="off">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="role">Role:</label>
+                <select id="role" [(ngModel)]="userData.role" name="role" required>
+                  <option value="">Select Role</option>
+                  <option value="admin">Admin</option>
+                  <option value="teacher">Teacher</option>
+                  <option value="student">Student</option>
+                </select>
+              </div>
+
+              <!-- User Role -->
+              <!-- <div class="mb-3">
+                <label for="role" class="form-label">Role </label>
+                <select class="form-select" id="role" name="role" required style="margin-left: 2.7vw;">
+                  <option value="" disabled selected>Select Role</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                  <option value="manager">Manager</option>
+                </select> -->
+
+                <!-- [(ngModel)]="loginData.role"  -->
+
+              <!-- </div> -->
+
+
+              <!-- Remember Me Checkbox -->
+              <!-- <div class="mb-4 flex items-center">
+                <input type="checkbox" id="remember" name="remember" [(ngModel)]="rememberMe" class="text-red-500">
+                <label for="remember" class="text-green-900 ml-2">Remember Me</label>
+              </div> -->
+
+
+
+              <!-- Forgot Password Link -->
+              <div class="mb-6 text-blue-500">
+                <a routerLink="/forgotPassword" class="hover:underline" routerLinkActive="">Forgot Password?</a>
+              </div>
+              <br>
+              <!-- Login Button -->
+              <button type="submit" routerLinkActive="active" (click)="checkLogin()"
+                class="bg-red-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button>
+            </form>
+            <br>
+            <!--Registration - Link -->
+            <div class="mt-6 text-green-500 text-center">
+              <a routerLink="/registration" class="hover:underline" routerLinkActive="routerLinkActive">Registration
+                !</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

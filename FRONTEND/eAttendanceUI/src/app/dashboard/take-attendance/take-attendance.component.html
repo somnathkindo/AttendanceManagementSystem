@@ -1,0 +1,83 @@
+<div class="total">
+  <div class="hb"
+  style="display: flex; min-height: 15vh; justify-content: space-between; background-color: rgb(18, 80, 212);">
+ <div>
+  <div>
+    <h3>
+      Date:{{date | date: 'shortDate'}}
+    </h3>
+  </div>
+  <div>
+    <label for="">
+      <h3>Course:</h3>
+    </label>
+    <select name="" id="" class="b1" >
+      <option value="">html</option>
+      <option value="">css</option>
+      <option value="">js</option>
+     </select>
+  </div>
+  <div>
+    <label for="">
+      <h3>Batch:</h3>
+    </label>
+    <select name="" id="" class="b1">
+      <option value="">1</option>
+      <option value="">2</option>
+      <option value="">3</option>
+     </select>
+  </div>
+
+ </div>
+ <div>
+
+  <div  style="margin-top: 2vh; margin-bottom: 2vh;">
+    <button (click)="saveAtten(true)" class="b1">
+      save
+    </button>
+  </div>
+  <div style="margin-top: 2vh; margin-bottom: 2vh;">
+    <button class="b1" (click)="getatt()">get Attendance</button>
+  </div>
+ </div>
+</div>
+
+<div class="main" *ngIf="dis">
+  <div style=" display: flex; justify-content: center; margin-bottom: 3vh;">
+    <h1>Student Table</h1>
+  </div>
+
+  <div class="scrl">
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>batch</th>
+          <th>gender</th>
+          <th>Attendance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stu of attendanceList">
+          <td>{{stu.regdId}}</td>
+          <td>{{stu.name}}</td>
+          <td>{{stu.course}}</td>
+          <td>{{stu.batch}}</td>
+          <td>{{stu.dt | date: 'shortDate' }}</td>
+          <td>
+            <label class="toggle">
+              <input type="checkbox" [(ngModel)]="stu.attendance">
+              <span class="slider"></span>
+            </label>
+          </td>
+          <td>{{stu.attendance}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</div>

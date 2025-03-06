@@ -1,0 +1,51 @@
+
+table {
+  min-width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.btn{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  max-height: 7.2vh;
+  min-height: 7.2vh;
+  min-width: 14vw;
+  max-width: 14vw;
+  border: 2px solid black;
+  border-radius: 25px;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.btn div{
+  /* padding: 1rem; */
+  max-height: 6.8vh;
+  min-height: 6.8vh;
+  border-radius: 25px;
+}
+
+.btn1{
+  max-height: 7vh;
+  min-height: 7vh;
+  background-color:red;
+  border-radius: 25px;
+}
+
+.btn2{
+  max-height: 7vh;
+  min-height: 7vh;
+  background-color:green;
+  border-radius: 25px;
+}

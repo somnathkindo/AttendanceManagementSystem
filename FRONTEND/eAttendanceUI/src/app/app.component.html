@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="item1">
+      <nav class="navbar">
+        <div class="navbar-brand">eAttendance</div>
+         <ul class="navbar-nav" *ngIf="lg">
+            <li class="nav-item"><a (click)="logout()">Logout</a></li>
+            <!-- <li class="nav-item"><a href="#attendance">Attendance</a></li>
+            <li class="nav-item"><a href="#reports">Reports</a></li>
+            <li class="nav-item"><a href="#profile">Profile</a></li>
+            <li class="nav-item"><a href="#settings">Settings</a></li> -->
+         </ul>
+    </nav>
+  </div>
+  <div class="item2">
+    <router-outlet></router-outlet>
+  </div>
+</div>

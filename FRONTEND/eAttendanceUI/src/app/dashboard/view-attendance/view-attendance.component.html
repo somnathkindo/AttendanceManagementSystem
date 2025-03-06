@@ -1,0 +1,77 @@
+<div class="main">
+
+  <div class="s1">
+    <div style="margin-bottom: 15px;">
+      <div>
+        <label for="course">Course:</label>
+        <select id="course" class="inp">
+          <option value="">--Select Course--</option>
+          <option *ngFor="let course of courses" [value]="course">{{ course }}</option>
+        </select>
+      </div>
+      <br>
+      <div style="margin-bottom: 15px;">
+        <label for="batch">Batch:</label>
+        <select id="batch" class="inp">
+          <option value="">--Select Batch--</option>
+          <option *ngFor="let batch of batches" [value]="batch">{{ batch }}</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" (click)="getAtt()">Get Attendance</button>
+      </div>
+    </div>
+
+    <div>
+      <div style="margin-bottom: 15px;">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" class="inp">
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" class="inp">
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="s2">
+
+    <div class="main1">
+      <div style=" display: flex; justify-content: center; margin-bottom: 3vh;">
+        <h1>Student Table</h1>
+
+      </div>
+
+      <div class="scrl">
+        <table>
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>date</th>
+              <th>Attendance</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stu of students">
+              <td>{{stu.regdId}}</td>
+              <td>{{stu.name}}</td>
+              <td>{{stu.dt | date: 'shortDate' }}</td>
+              <td>
+                <label class="toggle">
+                  <input type="checkbox" [(ngModel)]="stu.attendance">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>{{stu.attendance}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
